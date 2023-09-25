@@ -2,8 +2,9 @@
 
 ## Périmètre
 
-Objets disponibles: lampe connectée et LED. Volet connecté via un ajout l'interrupteur du volet, qui sera au final placé toujours sur ON. 
-
-* Radiateurs
+Premier jet: 
+* Radiateur
+* Lampe connectée
+* Volet roulant avec ajout sur l'interrupteur pour contrôler le volet
 
 ## Organisation
