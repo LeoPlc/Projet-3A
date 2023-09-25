@@ -10,12 +10,12 @@
 * Retenir le clébard du prof
 * (Fin de projet), mettre en place des connexions avec uber eats ou autre. 
 * Détecteur de position connecté à une ampoule
+* Caméra ? (voir les prix)
 
 ## Matériel à disposition
 
 * Lampe connectée
 * EVENTUELLEMENT des LED
-
 * Raspberry pi 4
 
 ## Objectif court terme
