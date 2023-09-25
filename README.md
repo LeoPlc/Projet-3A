@@ -13,6 +13,7 @@ Premier jet:
 ## Objectif court terme
 
 * Définir les objets concernés par le projet
+* Commencer à réfléchir pour la maquette de la maison connectée
 
 ## Objectif long terme
 
