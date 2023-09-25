@@ -16,6 +16,8 @@
 * Lampe connectée
 * EVENTUELLEMENT des LED
 
+* Raspberry pi 4
+
 ## Objectif court terme
 
 * Définir les objets concernés par le projet
