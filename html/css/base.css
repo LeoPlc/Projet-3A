@@ -1,0 +1,46 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: rgb(250,250,255);
+}
+
+h1{
+    font-size: 3vw;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    margin:5px;
+
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 150px;
+
+    background-color: rgb(220,220,250);
+}
+
+footer {
+    text-align: center;
+    justify-content: center;
+
+    padding: 20px;
+    background-color: rgb(210,210,225);
+}
