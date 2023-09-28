@@ -11,8 +11,8 @@ Délimitation du périmètre du projet, et listing des matériels et organisatio
 
 ### Objectif d'ici la fin de la séance
 
-* Regarder ce qui se fait dans le commerce
-* Se renseigner plus en détail sur le Zigbee
+* Regarder ce qui se fait dans le commerce: Mathis
+* Se renseigner plus en détail sur le Zigbee : Léo
 * Mettre en place des jalons majeurs
 * Se renseigner sur comment faire la maquette (3D, bois,...)
 
