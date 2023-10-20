@@ -50,3 +50,12 @@ Prévoyez des mises à jour pour prendre en charge de nouveaux appareils et prot
 
 *Il est important de noter que le développement d'une application IoT est un processus complexe, et il peut être utile de faire appel à des experts en IoT, en sécurité et en développement d'applications pour garantir la réussite de votre projet.*
 
+
+# Comment développer l'application ?
+
+front-end + backend avec une communication entre les deux serveurs. Penser aux bibliothèques existantes sur les différents langages de programmation pour pouvoir mettre en place les différents protocoles (Zigbee, Bluetooth, ...). 
+
+Quel langage de programmation pour le backend ? 
+* Python 
+* C 
+* JavaScript
