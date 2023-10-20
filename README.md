@@ -7,7 +7,7 @@
 * Volet roulant avec ajout sur l'interrupteur pour contrôler le volet
 * Prise connectée
 * Disjoncteur connecté
-* Retenir le clébard du prof
+* Retenir le chien du prof
 * (Fin de projet), mettre en place des connexions avec uber eats ou autre. 
 * Détecteur de position connecté à une ampoule
 * Caméra ? (voir les prix)
