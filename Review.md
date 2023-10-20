@@ -7,7 +7,7 @@ Prise de connaissance et mise en place du sujet, validation par le prof.
 Délimitation du périmètre du projet, et listing des matériels et organisation de ces derniers dans les "locaux" d'une maquette de maison.
 
 
-## 28/09/2023
+## 28/09/2023 séance 2
 
 ### Objectif d'ici la fin de la séance
 
@@ -18,3 +18,6 @@ Délimitation du périmètre du projet, et listing des matériels et organisatio
 
 
 ### Debrief
+
+## 20/10/2023 séance 3
+
