@@ -22,3 +22,23 @@ https://github.com/Koenkk/zigbee2mqtt
 https://www.zigbee2mqtt.io/devices/ZB_A60_RGBCW.html
 
 https://www.zigbee2mqtt.io/
+
+
+
+# Connexion Zigbee2MQTT
+
+Après le cours sur les IOT, j'ai demandé au prof de nous aider sur le sujet. 
+Il m'a envoyé cette vidéo : [Tuto Zigbee to MQTT](https://www.youtube.com/watch?v=frwhcYQKElU).
+
+Il m'a de plus indiqué un rapport d'anciens élèves sur un sujet un peu similaire. 
+
+Nous savons maintenant comment connecter nos produits Zigbee a notre raspberry. 
+Nous pouvons donc nous ataquer aux produits à acheter. 
+
+- [Passerelle Zigbee](https://www.amazon.fr/SONOFF-EFR32MG21-Coordinator-Universelle-Passerelle/dp/B0B6P22YJC?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1J8B31DEB9NS3&keywords=sonoff+zigbee+3.0+usb&qid=1667371853&qu=eyJxc2MiOiIwLjQ5IiwicXNhIjoiMC41NyIsInFzcCI6IjAuNjUifQ%3D%3D&sprefix=sonoff+zigbee+3.0+us,aps,322&sr=8-6&linkCode=sl1&tag=aceinternet02-21&linkId=a271fdc1d9b58cecb783682fbb1df9af&language=fr_FR&ref_=as_li_ss_tl)
+
+- [Capteur de température Zigbee](https://www.amazon.fr/Aqara-Temperatur-Luftfeuchtigkeits-Luftdrucksensor-Homekit/dp/B07D37FKGY/ref=sr_1_2_sspa?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=32H5YNFBFTYF1&keywords=capteur+xiaomi+zigbee&qid=1699609343&sprefix=capteur+xiaomi+zigbee%2Caps%2C69&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)
+
+- 
+
+
