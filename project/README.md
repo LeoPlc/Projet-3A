@@ -46,3 +46,7 @@ L'application mettra donc en oeuvre des concepts de matériel, de protocoles de 
 ## "HOW TO CREATE AN IOT APP" 
 
 https://waverleysoftware.com/blog/how-to-create-an-iot-app/
+
+Structure de l'application selon ce site : 
+
+![iotAppStructure](img/appStructure.png)
