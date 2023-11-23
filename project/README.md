@@ -30,7 +30,6 @@ Ainsi ce projet permettra de décrire comment concevoir une application permetta
 ### DIAGRAMME BÊTE A CORNE
 
 
-
 ## 2- ARCHITECTURE DE L'APPLICATION
 
 Avant de commencer toute activité, il faut décider de l'architecture de l'application, car cette dernière devra non seulement permettre la communication avec différents appareils connectés, mais devra aussi traiter les données provenant de ces objets *(capteurs de température, de mouvement, flux vidéo,...)* afin d'en retirer un comportement voulu *(monter la température, fermer un volet, alerter le propriétaire d'un mouvement inhabituel,...)*.
