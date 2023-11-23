@@ -4,6 +4,8 @@ Ce projet consiste à concevoir étape par étape une application permettant d'i
 
 ## 1- INTRODUCTION
 
+### DESCRIPTION DU PROJET
+
 En premier lieu, il faut se poser la question suivante: **comment fonctionnent les objets connectés ?** Cette question rassemble non seulement les différents types d'objets connectés existants et leurs différents domaines d'application, mais aussi les protocoles de communication mis en oeuvre selon ces domaines. Dans notre cas, il s'agit d'une maison connectée. Nous pouvons donc avoir affaire aux objets **connectés** suivants *(liste non exhaustive)*:
 
 - Ampoules RGB 
@@ -24,6 +26,10 @@ Dans notre cas, nous allons vous présenter quelques uns de ces objets au traver
 En fonction des protocoles de communication mis en place, il n'y a pas seulement l'objet et l'application à prendre en compte, mais aussi parfois une passerelle permettant de transmettre les informations de l'application vers l'objet connecté (par exemple en Zigbee, une passerelle est connectée à une box WiFi - *ou partage de connexion* - et transmets les requêtes en Zigbee jusqu'aux objets concernés).
 
 Ainsi ce projet permettra de décrire comment concevoir une application permettant de se connecter à divers appareils connectés via différents protocoles et différentes installations.
+
+### DIAGRAMME BÊTE A CORNE
+
+
 
 ## 2- ARCHITECTURE DE L'APPLICATION
 
@@ -50,3 +56,35 @@ https://waverleysoftware.com/blog/how-to-create-an-iot-app/
 Structure de l'application selon ce site : 
 
 ![iotAppStructure](img/appStructure.png)
+
+## WEB APPLICATION
+
+### ZIGBEE TO MQTT
+
+https://www.youtube.com/watch?v=frwhcYQKElU
+
+### DEVELOPPER UNE APP WEB AVEC PYTHON
+
+https://www.youtube.com/watch?v=ns7cmSaiA9E
+
+### NORME IEEE
+
+https://ieee-iotj.org/
+
+### MQTT SWIFT
+
+https://medium.com/@prithvi2229/a-comprehensive-guide-to-connecting-with-iot-devices-in-ios-using-swift-and-cocoamqtt-d841af2a9cc2
+
+### HEBERGEMENT APP WEB 
+
+https://www.axiocode.com/heberger-application-mobile/
+
+
+### CREER APP WEB
+
+https://agence-scroll.com/blog/creer-application-web
+
+
+### UTILISER UN RASPBERRY EN TANT QUE SERVEUR
+
+https://www.toptal.com/raspberry-pi/how-to-turn-your-raspberry-pi-into-a-development-server

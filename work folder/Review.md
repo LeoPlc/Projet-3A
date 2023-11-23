@@ -43,13 +43,14 @@ Délimitation du périmètre du projet, et listing des matériels et organisatio
 
 * Regarder ce qui se fait dans le commerce: Mathis
 * Se renseigner plus en détail sur le Zigbee : Léo
-* Mettre en place des jalons majeurs
 * Se renseigner sur comment faire la maquette (3D, bois,...)
 
 
 ### Debrief
 
-## 20/10/2023 séance 3
+## 23/11/2023
 
-C'est marrant comment on a arrêté les review lol
+- Noter la procédure de mise en place Zigbee2MQTT
+- Prototype python
+- Quel langage de dev ? 
 
