@@ -46,6 +46,24 @@ L'application doit donc permettre les choses suivantes:
 L'application mettra donc en oeuvre des concepts de matériel, de protocoles de transmission, mais aussi de base de donnée, de front-end / back-end afin de parvenir à piloter une maison connectée. 
 
 
+### Modèles
+
+- Collection (organisation des tâches en différentes catégories)
+    - Nom
+    - "Slug"
+- Tâche
+    - Description
+    - Collection d'appartenance (clé d'appartenance à une collection)
+
+### Fonctionalités 
+
+[ ] Ajouter une collection  
+[ ] Supprimer une collection  
+[ ] Ajouter une tâche  
+[ ] Supprimer une tâche  
+[ ] Scripter les tâches (exemple ampoules RGB, modes de couleurs)
+ 
+
 # BIBLIOGRAPHIE / LIENS UTILES
 
 ## "HOW TO CREATE AN IOT APP" 
