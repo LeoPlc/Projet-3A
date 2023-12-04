@@ -57,19 +57,26 @@ L'application mettra donc en oeuvre des concepts de matériel, de protocoles de 
 
 # Fonctionalités 
 
+Ces fonctionnalités vont permettre la mise en oeuvre du POC, ou Proof of Concept, permettant de valider ou non le cahier des charges initial (fonctionnalités demandées, ici le fait de pouvoir se connecter à distance à un appareil connecté comme une ampoule RGB).
+
+Le POC consiste donc pour nous à mettre en oeuvre les fonctionnalités minimales représentant le projet: se connecter/se déconnecter d'un appareil. Si ces fonctionnalités sont opérationnelles, il faut ensuite pouvoir envoyer une instruction/une commande à cet appareil.
+
+C'est seulement ensuite qu'intervient la personnalisation de l'application Web, une fois que ces fonctionnalités **fondation** sont opérationnelles (créer des listes d'appareils, des scripts permettant d'enchaîner les instructions à la demande...)
+
 ## Majeures
 
-[ ] Connecter un appareil  
-[ ] Déconnecter un appareil  
-[ ] Envoyer une instruction à un appareil selon sa marque
+- [ ] Chercher un appareil  
+- [ ] Connecter un appareil  
+- [ ] Déconnecter un appareil  
+- [ ] Envoyer une instruction à l'appareil
 
 ## Mineures
 
-[ ] Ajouter une collection (appareils personnels)  
-[ ] Supprimer une collection (appareils personnels)  
-[ ] Ajouter une tâche (allumer, éteindre, activer, désactiver)  
-[ ] Supprimer une tâche  
-[ ] Scripter les tâches (exemple ampoules RGB, modes de couleurs)
+- [ ] Ajouter une collection (appareils personnels)  
+- [ ] Supprimer une collection (appareils personnels)  
+- [ ] Ajouter une tâche (allumer, éteindre, activer, désactiver)  
+- [ ] Supprimer une tâche  
+- [ ] Scripter les tâches (exemple ampoules RGB, modes de couleurs)
 
 
 # BIBLIOGRAPHIE / LIENS UTILES
