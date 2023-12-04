@@ -55,14 +55,22 @@ L'application mettra donc en oeuvre des concepts de matériel, de protocoles de 
     - Description
     - Collection d'appartenance (clé d'appartenance à une collection)
 
-### Fonctionalités 
+# Fonctionalités 
 
-[ ] Ajouter une collection  
-[ ] Supprimer une collection  
-[ ] Ajouter une tâche  
+## Majeures
+
+[ ] Connecter un appareil  
+[ ] Déconnecter un appareil  
+[ ] Envoyer une instruction à un appareil selon sa marque
+
+## Mineures
+
+[ ] Ajouter une collection (appareils personnels)  
+[ ] Supprimer une collection (appareils personnels)  
+[ ] Ajouter une tâche (allumer, éteindre, activer, désactiver)  
 [ ] Supprimer une tâche  
 [ ] Scripter les tâches (exemple ampoules RGB, modes de couleurs)
- 
+
 
 # BIBLIOGRAPHIE / LIENS UTILES
 
