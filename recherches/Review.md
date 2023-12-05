@@ -54,3 +54,14 @@ Délimitation du périmètre du projet, et listing des matériels et organisatio
 - Prototype python
 - Quel langage de dev ? 
 
+## 04/12/2023
+
+- Achat des matériels de base:
+  - Ampoule RGB IKEA
+  - Répéteur WiFi
+  - Capteur de température et humidité
+  - 2 cartes SD 32 Go
+
+- Reste à acheter
+  - Volet roulant
+  - Capteur de contact pour porte
