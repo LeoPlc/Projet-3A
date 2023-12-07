@@ -20,8 +20,9 @@ import tasks.views as views
 
 urlpatterns = [
     path('',views.index,name = "home"),
-    path('connect-iot/',views.connect_iot,name = "connect-iot"),
+    path('add-collection/',views.add_collection,name = "add-collection"),
+    path('add-task/',views.add_task,name = "add-task"),
     path("admin/", admin.site.urls),
-
+    
 
 ]
