@@ -55,7 +55,7 @@ L'application mettra donc en oeuvre des concepts de matériel, de protocoles de 
     - Description
     - Collection d'appartenance (clé d'appartenance à une collection)
 
-# Fonctionalités 
+## 3-Fonctionalités 
 
 Ces fonctionnalités vont permettre la mise en oeuvre du POC, ou Proof of Concept, permettant de valider ou non le cahier des charges initial (fonctionnalités demandées, ici le fait de pouvoir se connecter à distance à un appareil connecté comme une ampoule RGB).
 
@@ -63,14 +63,14 @@ Le POC consiste donc pour nous à mettre en oeuvre les fonctionnalités minimale
 
 C'est seulement ensuite qu'intervient la personnalisation de l'application Web, une fois que ces fonctionnalités **fondation** sont opérationnelles (créer des listes d'appareils, des scripts permettant d'enchaîner les instructions à la demande...)
 
-## Majeures
+### Majeures
 
 - [ ] Chercher un appareil  
 - [ ] Connecter un appareil  
 - [ ] Déconnecter un appareil  
 - [ ] Envoyer une instruction à l'appareil
 
-## Mineures
+### Mineures
 
 - [ ] Ajouter une collection (appareils personnels)  
 - [ ] Supprimer une collection (appareils personnels)  
@@ -79,9 +79,16 @@ C'est seulement ensuite qu'intervient la personnalisation de l'application Web, 
 - [ ] Scripter les tâches (exemple ampoules RGB, modes de couleurs)
 
 
-# BIBLIOGRAPHIE / LIENS UTILES
+## 4-DESCRIPTION DES CODES PYTHON
 
-## "HOW TO CREATE AN IOT APP" 
+Ici sont présentés les codes qui conçoivent l'application Web permettant de se connecter aux différents appareils. L'application a été développée en **python** à l'aide des bibliothèques **django**, **2**, et **3**. Le code s'articule de la manière suivante.
+
+##
+
+
+## 5-BIBLIOGRAPHIE / LIENS UTILES
+
+#### "HOW TO CREATE AN IOT APP" 
 
 https://waverleysoftware.com/blog/how-to-create-an-iot-app/
 
@@ -89,34 +96,34 @@ Structure de l'application selon ce site :
 
 ![iotAppStructure](img/appStructure.png)
 
-## WEB APPLICATION
+### WEB APPLICATION
 
-### ZIGBEE TO MQTT
+#### ZIGBEE TO MQTT
 
 https://www.youtube.com/watch?v=frwhcYQKElU
 
-### DEVELOPPER UNE APP WEB AVEC PYTHON
+#### DEVELOPPER UNE APP WEB AVEC PYTHON
 
 https://www.youtube.com/watch?v=ns7cmSaiA9E
 
-### NORME IEEE
+#### NORME IEEE
 
 https://ieee-iotj.org/
 
-### MQTT SWIFT
+#### MQTT SWIFT
 
 https://medium.com/@prithvi2229/a-comprehensive-guide-to-connecting-with-iot-devices-in-ios-using-swift-and-cocoamqtt-d841af2a9cc2
 
-### HEBERGEMENT APP WEB 
+#### HEBERGEMENT APP WEB 
 
 https://www.axiocode.com/heberger-application-mobile/
 
 
-### CREER APP WEB
+#### CREER APP WEB
 
 https://agence-scroll.com/blog/creer-application-web
 
 
-### UTILISER UN RASPBERRY EN TANT QUE SERVEUR
+#### UTILISER UN RASPBERRY EN TANT QUE SERVEUR
 
 https://www.toptal.com/raspberry-pi/how-to-turn-your-raspberry-pi-into-a-development-server
