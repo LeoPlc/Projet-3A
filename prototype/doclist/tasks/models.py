@@ -17,3 +17,5 @@ class Collection(models.Model):
 class Task(models.Model):
     description = models.CharField(max_length=300)
     collection = models.ForeignKey(Collection, on_delete = models.CASCADE) # Si on supprime une collection, on_delete = models.CASCADE fait en sorte que les tâches associées à la collection le seront aussi
+    def __str__(self):
+        return self.description
