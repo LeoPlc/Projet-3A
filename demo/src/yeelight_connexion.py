@@ -13,17 +13,15 @@ def connectObject(ipAddr):
 
 def turnBulb(bulb,light_option):
     if light_option == 1 :
-        if bulb.turn_on(): # Trouver comment faire en sorte de vérifier que le bulbe est déjà allumé
+        if bulb.get_properties()["power"] == "on": # Trouver comment faire en sorte de vérifier que le bulbe est déjà allumé
             print("Bulb already on")
         else : 
             bulb.turn_on()
     elif light_option == 0:
-        if bulb.turn_off:
+        if bulb.bulb.get_properties()["power"] == "off":
             print("Bulb already off")
         else: 
             bulb.turn_off()
-
-
 
 
 
