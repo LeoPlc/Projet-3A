@@ -1,5 +1,33 @@
 from yeelight import Bulb, discover_bulbs
-from tabulate import tabulate
+
+
+def getIpAddr():
+    ipAddr = discover_bulbs()
+    return ipAddr
+
+
+def connectObject(ipAddr):
+    bulb = Bulb(ipAddr)
+    return bulb
+
+
+def turnBulb(bulb,light_option):
+    if light_option == 1 :
+        if bulb.turn_on(): # Trouver comment faire en sorte de vérifier que le bulbe est déjà allumé
+            print("Bulb already on")
+        else : 
+            bulb.turn_on()
+    elif light_option == 0:
+        if bulb.turn_off:
+            print("Bulb already off")
+        else: 
+            bulb.turn_off()
+
+
+
+
+
+'''
 
 headers = ['ID', 'IP', 'Name', 'Type']
 content = []
@@ -36,7 +64,7 @@ def adjust_brightness(bulbs):
             bulb.set_brightness(int(bright))
     except Exception as e:
         print(e)
-        
+
 def list_bulb_properties(bulbs):
     if len(properties_content) > 0:
         properties_content.clear()
@@ -44,3 +72,31 @@ def list_bulb_properties(bulbs):
         bulb = Bulb(bulbs[0]['ip'])
         props = bulb.get_properties()
         properties_content.append([i, props['name'], props['power'], props['bright'], props['sat'], props['music_on']])
+        
+
+def showMenu():
+    print("""
+    [5] - Adjust brightness
+    [4] - Turn on lights
+    [3] - Turn off lights
+    [2] - List Bulb Properties
+    [1] - List bulbs
+    [0] - Exit
+    [F] - Force Bulb Reload
+    """)
+    
+    # Get user option
+    ans = input("Option => ")
+    if ans == "0" or ans.lower() == "exit":
+        pass
+    elif ans == "1":
+        # execute action
+        showMenu()
+    elif ans == "2":
+        # execute action
+        showMenu()
+    else:
+        print("Select a valid option")
+        showMenu()
+        
+'''
