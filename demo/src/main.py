@@ -11,7 +11,6 @@ import yeelight_connexion as yc
 Script d'exécution de l'application en terminal de commande:
     - Exécuter le main
     - Le main fait en sorte de tourner continuellement (ex - fonction run())
-    
 '''
 
 print("Options disponibles :\n'1': addresses IP disponibles\n'2': se connecter à une addresse IP\n'3':Allumer l'appareil.\n'4':Eteindre l'appareil connecté.\n'5': lancer la démo\n")
