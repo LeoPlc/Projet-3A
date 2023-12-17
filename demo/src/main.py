@@ -5,6 +5,9 @@ import yeelight_connexion as yc
 
 import tkinter as tk
 
+from tkinter import PhotoImage
+
+
 
 # Lampe Xiaomi Mathis
 # 192.168.1.58
@@ -106,6 +109,75 @@ def execChoiceFunc(choix):
         print("choix invalide, retenter.\n")
 
     
+def affichageImage1(fenetre):
+
+    espacement = 26.66
+    tailleImg = 256
+
+    # Charger une image1 et redimensionner
+    image1 = PhotoImage(file="imgs/RechercheIp.png")  
+    image1 = image1.subsample(4, 4)  # Facteur de sous-échantillonnage (ajuster selon vos besoins)
+
+    # Charger une image2 et redimensionner
+    image2 = PhotoImage(file="imgs/ConnexionToBulb.png")  
+    image2 = image2.subsample(4, 4)  # Facteur de sous-échantillonnage (ajuster selon vos besoins)
+
+    # Charger une image3 et redimensionner
+    image3 = PhotoImage(file="imgs/BulbOn.png")  
+    image3 = image3.subsample(4, 4)  # Facteur de sous-échantillonnage (ajuster selon vos besoins)
+
+    # Charger une image4 et redimensionner
+    image4 = PhotoImage(file="imgs/BulbOff.png")  
+    image4 = image4.subsample(4, 4)  # Facteur de sous-échantillonnage (ajuster selon vos besoins)
+
+    # Charger une image5 et redimensionner
+    image5 = PhotoImage(file="imgs/Demo.png")  
+    image5 = image5.subsample(4, 4)  # Facteur de sous-échantillonnage (ajuster selon vos besoins)
+
+    fenetre.image1 = image1
+    canvas = tk.Canvas(fenetre, width=image1.width(), height=image1.height())
+    canvas.place(x=espacement, y=150)
+    canvas.create_image(0, 0, anchor=tk.NW, image=image1)
+
+    fenetre.image2 = image2
+    canvas = tk.Canvas(fenetre, width=image2.width(), height=image2.height())
+    canvas.place(x=2 * espacement + tailleImg, y=150)
+    canvas.create_image(0, 0, anchor=tk.NW, image=image2)
+
+    fenetre.image3 = image3
+    canvas = tk.Canvas(fenetre, width=image3.width(), height=image3.height())
+    canvas.place(x=3 * espacement + 2 * tailleImg, y=150)
+    canvas.create_image(0, 0, anchor=tk.NW, image=image3)
+
+    fenetre.image4 = image4
+    canvas = tk.Canvas(fenetre, width=image4.width(), height=image4.height())
+    canvas.place(x=4 * espacement + 3 * tailleImg , y=150)
+    canvas.create_image(0, 0, anchor=tk.NW, image=image4)
+
+    fenetre.image5 = image5
+    canvas = tk.Canvas(fenetre, width=image5.width(), height=image5.height())
+    canvas.place(x=5 * espacement + 4 * tailleImg, y=150)
+    canvas.create_image(0, 0, anchor=tk.NW, image=image5)
+
+    bouton1 = tk.Button(fenetre, text="Option 1", command=choix1ipDisponibles)
+    x_bouton1 = espacement + (tailleImg - bouton1.winfo_reqwidth() )/ 2
+    bouton1.place(x=x_bouton1, y=150 + image1.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
+
+    bouton2 = tk.Button(fenetre, text="Option 2", command=choix2connecterIP)
+    x_bouton2 = 2 * espacement + tailleImg + (tailleImg - bouton2.winfo_reqwidth() )/ 2
+    bouton2.place(x=x_bouton2, y=150 + image2.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
+
+    bouton3 = tk.Button(fenetre, text="Option 3", command=choix3allumerLampe)
+    x_bouton3 = 3 * espacement + 2 * tailleImg + (tailleImg - bouton3.winfo_reqwidth() )/ 2
+    bouton3.place(x=x_bouton3, y=150 + image3.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
+
+    bouton4 = tk.Button(fenetre, text="Option 4", command=choix4eteindreLampe)
+    x_bouton4 = 4 * espacement + 3 * tailleImg + (tailleImg - bouton4.winfo_reqwidth() )/ 2
+    bouton4.place(x=x_bouton4, y=150 + image4.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
+
+    bouton5 = tk.Button(fenetre, text="Option 5", command=choix5lancerDemo)
+    x_bouton5 = 5 * espacement + 4 * tailleImg + (tailleImg - bouton5.winfo_reqwidth() )/ 2
+    bouton5.place(x=x_bouton5, y=150 + image5.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
 
 def creer_fenetre():
     fenetre = tk.Tk()
@@ -116,21 +188,7 @@ def creer_fenetre():
     label = tk.Label(fenetre, text="Cliquez sur une option")
     label.pack()
 
-    bouton1 = tk.Button(fenetre, text="Option 1", command=choix1ipDisponibles)
-    bouton1.pack()
-
-    bouton2 = tk.Button(fenetre, text="Option 2", command=choix2connecterIP)
-    bouton2.pack()
-
-    bouton3 = tk.Button(fenetre, text="Option 3", command=choix3allumerLampe)
-    bouton3.pack()
-
-    bouton4 = tk.Button(fenetre, text="Option 4", command=choix4eteindreLampe)
-    bouton4.pack()
-
-    bouton5 = tk.Button(fenetre, text="Option 5", command=choix5lancerDemo)
-    bouton5.pack()
-
+    affichageImage1(fenetre)
 
     bouton_quitter = tk.Button(fenetre, text="Quitter l'application", command=fenetre.destroy)
     bouton_quitter.pack()
