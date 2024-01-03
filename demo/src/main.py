@@ -20,6 +20,13 @@ eteindreLampe = 4
 lancerDemo = 5
 
 
+# Variables globales
+
+ipAddr = None
+object = None
+
+
+
 def choixFunction():
     print("Options disponibles :\n'1': addresses IP disponibles\n'2': se connecter à une addresse IP\n'3':Allumer l'appareil.\n'4':Eteindre l'appareil connecté.\n'5': lancer la démo\n")
     choix = input("Choisissez une option: \n")    
@@ -31,7 +38,7 @@ def choix1ipDisponibles():
 
     ipAddr = None # Addresse IP d'un appareil connu (forcer la connaissance du réseau)
     object = None
-    ipAddr = yc.getIpAddr()
+    ipAddr = yc.getAvailableObjects()
 
 def choix2connecterIP():
     label.config(text="Vous avez choisi l'option 2")
@@ -51,7 +58,7 @@ def choix3allumerLampe():
     if object == None:
         print("Pas d'objet connecté. Relancer et se connecter à un appareil.\n")
     else:
-        if ipAddr == '0':
+        if ipAddr == None:
             print("Pas d'objet connecté. Sélectionner une addresse IP, se connecter, et retenter.\n")
         else:
             yc.turnBulb(object,1)
@@ -74,7 +81,7 @@ def choix5lancerDemo():
     object = None
 
     # Script démo
-    ipAddr = yc.getIpAddr()
+    ipAddr = yc.getAvailableObjects()
     object = yc.connectObject(ipAddr)
     yc.turnBulb(object,1) # Allumer
     # yc.turnBulb(object,0) # Éteindre
@@ -159,23 +166,23 @@ def affichageImage1(fenetre):
     canvas.place(x=5 * espacement + 4 * tailleImg, y=150)
     canvas.create_image(0, 0, anchor=tk.NW, image=image5)
 
-    bouton1 = tk.Button(fenetre, text="Option 1", command=choix1ipDisponibles)
+    bouton1 = tk.Button(fenetre, text="Available IP", command=choix1ipDisponibles)
     x_bouton1 = espacement + (tailleImg - bouton1.winfo_reqwidth() )/ 2
     bouton1.place(x=x_bouton1, y=150 + image1.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
 
-    bouton2 = tk.Button(fenetre, text="Option 2", command=choix2connecterIP)
+    bouton2 = tk.Button(fenetre, text="Connect IP", command=choix2connecterIP)
     x_bouton2 = 2 * espacement + tailleImg + (tailleImg - bouton2.winfo_reqwidth() )/ 2
     bouton2.place(x=x_bouton2, y=150 + image2.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
 
-    bouton3 = tk.Button(fenetre, text="Option 3", command=choix3allumerLampe)
+    bouton3 = tk.Button(fenetre, text="Turn on", command=choix3allumerLampe)
     x_bouton3 = 3 * espacement + 2 * tailleImg + (tailleImg - bouton3.winfo_reqwidth() )/ 2
     bouton3.place(x=x_bouton3, y=150 + image3.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
 
-    bouton4 = tk.Button(fenetre, text="Option 4", command=choix4eteindreLampe)
+    bouton4 = tk.Button(fenetre, text="Turn off", command=choix4eteindreLampe)
     x_bouton4 = 4 * espacement + 3 * tailleImg + (tailleImg - bouton4.winfo_reqwidth() )/ 2
     bouton4.place(x=x_bouton4, y=150 + image4.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
 
-    bouton5 = tk.Button(fenetre, text="Option 5", command=choix5lancerDemo)
+    bouton5 = tk.Button(fenetre, text="Demo", command=choix5lancerDemo)
     x_bouton5 = 5 * espacement + 4 * tailleImg + (tailleImg - bouton5.winfo_reqwidth() )/ 2
     bouton5.place(x=x_bouton5, y=150 + image5.height() + 10)  # Ajuster la position verticale en ajoutant 10 pixels
 
@@ -205,19 +212,6 @@ fenetre, label = creer_fenetre()
 lancer_interface()
 
 
-'''
-Script d'exécution de l'application en terminal de commande:
-    - Exécuter le main
-    - Le main fait en sorte de tourner continuellement (ex - fonction run())
-'''
-
-#choix = choixFunction()   
-#choix = int(choix)
-
-
-#execChoiceFunc(choix)
-
-    
 
 
 

@@ -4,7 +4,7 @@ import readline
 import yeelight_connexion as yc
 
 # Lampe Xiaomi Mathis
-# 192.168.1.58
+# 192.168.1.18
 
 
 '''

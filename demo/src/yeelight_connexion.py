@@ -1,9 +1,8 @@
 from yeelight import Bulb, discover_bulbs
 
 
-def getIpAddr():
-    ipAddr = discover_bulbs()
-    return ipAddr
+def getAvailableObjects():
+    return discover_bulbs()
 
 
 def connectObject(ipAddr):
