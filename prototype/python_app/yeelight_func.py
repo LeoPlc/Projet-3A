@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import yeelight
 import func 
 import tkinter as tk
@@ -32,3 +33,5 @@ def connect_available_bulb():
     #connexion à au bulbe choisi
     
     #choix de l'action à y faire
+=======
+>>>>>>> Stashed changes
