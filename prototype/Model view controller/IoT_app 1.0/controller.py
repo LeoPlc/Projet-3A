@@ -20,6 +20,9 @@ class Controller:
 
         elif caption == 'connect IoT':
             pass
+        
+        elif caption == 'delete list':
+            self.view.delete_list()
             
     
 if __name__ == "__main__":

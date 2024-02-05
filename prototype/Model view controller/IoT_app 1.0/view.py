@@ -7,7 +7,7 @@ class View(tk.Tk):
     MAX_BUTTONS_PER_ROW = 4
     
     button_captions = [
-        'Show available IoT', 'connect IoT'
+        'Show available IoT', 'connect IoT', 'delete list'
     ]
     
     def __init__(self,controller):
@@ -48,7 +48,7 @@ class View(tk.Tk):
         x_offset = (self.winfo_screenwidth() - width) // 3
         y_offset = (self.winfo_screenheight()- height) // 3
         
-        self.geometry(f'600x400+{x_offset}+{y_offset}')
+        self.geometry(f'400x400+{x_offset}+{y_offset}')
         
     # ================================================================== #  
     # ======================= BUTTONS MANAGEMENT ======================= #  
@@ -85,32 +85,19 @@ class View(tk.Tk):
     # ================================================================== #  
     
     def _make_list(self):
-        self.lst = tk.Listbox(self.main_frm)
-        self.lst.pack()
-
+        self.lst = tk.Listbox(self)
+        self.lst.pack()    
         
     def update_list(self):
-        self.lst = []
         cpt = 0
         
-        IoT_lst = self.available_IoTs
+        self.lst.delete(0,tk.END)
         
-        print(self.available_IoTs)
-        
-        for IoT in IoT_lst:
-            self.lst.insert(cpt,IoT)
+        for item in self.available_IoTs: 
+            self.lst.insert(cpt,item)
             cpt += 1
-    
-    # ================================================================== #  
-    # ======================== ENTRY MANAGEMENT ======================== #
-    # ================================================================== #  
-    
-    def _make_entry(self):
-        ent = ttk.Entry(
-            self.main_frm,
-            justify = 'center',
-            textvariable = self.valueVar,
-            state = 'disabled' # Pour pas qu'on puisse écrire dedans
-        )
+            
+        self.lst.pack()
         
-        ent.pack(fill='y',expand=True, side='bottom')
+    def delete_list(self):
+        self.lst.delete(0,tk.END)
