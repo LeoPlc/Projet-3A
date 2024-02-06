@@ -83,10 +83,48 @@ C'est seulement ensuite qu'intervient la personnalisation de l'application Web, 
 
 Ici sont présentés les codes qui conçoivent l'application Web permettant de se connecter aux différents appareils. L'application a été développée en **python** à l'aide des bibliothèques **django**, **2**, et **3**. Le code s'articule de la manière suivante.
 
-##
+## 5- INSTALLATION ET UTILISATION DU BROKER MQTT 
 
+### Installation pour Mac
 
-## 5-BIBLIOGRAPHIE / LIENS UTILES
+Installer la librairie mosquitto: 
+
+    brew install mosquitto
+
+Le fichier de configuration est stocké dans le dossier 
+
+    /opt/homebrew/etc/mosquitto/mosquitto.conf
+
+Pour lancer les services mosquitto:
+
+    brew services start mosquitto
+
+Une fois ces étapes effectuées on peut utiliser les fonctions mosquitto telles que:
+
+    mosquitto_sub 
+
+Permettant de s'abonner à un sujet (fait partie du protocole Zigbee)
+
+### Test de la librairie mosquitto
+
+Pour pouvoir tester le fonctionnement de mosquitto, on peut ouvrir deux terminaux de commande. 
+Dans le premier terminal, écrire la commande: 
+
+    mosquitto_sub -t topic/state
+
+Dans le second écrire la commande: 
+
+    mosquitto_pub -t topic/state -m "hello world"
+
+Le texte **"Hello world"** devrait s'afficher dans le premier terminal.
+
+### Liens utilisés :
+
+- Lien vers un [article d'installation de mosquitto sur Mac](https://subscription.packtpub.com/book/iot-and-hardware/9781787287815/1/ch01lvl1sec12/installing-a-mosquitto-broker-on-macos).
+- Deuxième [lien pour l'installation sur Mac](https://gist.github.com/KazChe/6bcafbaf29e10a7f309d3ca2e2a0f706)
+- Version [vidéo pour Mac](https://www.youtube.com/watch?v=AD1YvjmRiR4).
+
+## BIBLIOGRAPHIE / LIENS UTILES
 
 #### "HOW TO CREATE AN IOT APP" 
 
@@ -102,28 +140,7 @@ Structure de l'application selon ce site :
 
 https://www.youtube.com/watch?v=frwhcYQKElU
 
-#### DEVELOPPER UNE APP WEB AVEC PYTHON
-
-https://www.youtube.com/watch?v=ns7cmSaiA9E
 
 #### NORME IEEE
 
 https://ieee-iotj.org/
-
-#### MQTT SWIFT
-
-https://medium.com/@prithvi2229/a-comprehensive-guide-to-connecting-with-iot-devices-in-ios-using-swift-and-cocoamqtt-d841af2a9cc2
-
-#### HEBERGEMENT APP WEB 
-
-https://www.axiocode.com/heberger-application-mobile/
-
-
-#### CREER APP WEB
-
-https://agence-scroll.com/blog/creer-application-web
-
-
-#### UTILISER UN RASPBERRY EN TANT QUE SERVEUR
-
-https://www.toptal.com/raspberry-pi/how-to-turn-your-raspberry-pi-into-a-development-server
