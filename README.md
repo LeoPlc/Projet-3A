@@ -139,8 +139,3 @@ Structure de l'application selon ce site :
 #### ZIGBEE TO MQTT
 
 https://www.youtube.com/watch?v=frwhcYQKElU
-
-
-#### NORME IEEE
-
-https://ieee-iotj.org/
