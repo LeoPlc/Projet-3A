@@ -7,6 +7,7 @@ class View(tk.Tk):
     def __init__(self, controller):
         super().__init__()
         self.controller = controller
+        self.title("zigbee2mqtt 1.2.1")
 
         color_button = tk.Button(self, text="Choisir une couleur", command=self.controller.send_mqtt_msg)
         color_button.pack(pady=20)

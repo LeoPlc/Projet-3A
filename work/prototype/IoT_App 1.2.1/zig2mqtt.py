@@ -22,7 +22,7 @@ class Sensor(ZigbeeToMQTT):
         super().__init__()
         
         self._message = ''
-        self._topic = "zigbee2mqtt/0xec1bbdfffe0fb268"
+        self._topic = "zigbee2mqtt/T_H_zigbeeSensor"
     
     def get_temperature(self):
         pass
