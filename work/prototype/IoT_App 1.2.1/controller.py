@@ -13,13 +13,13 @@ class Controller:
         rawColor = self.view.chose_color()
         self.model._bulb.set_properties(rawColor)
 
-    def update_brightness(self,value):
+    def update_brightness(self, value):
         self.model._bulb.update_brightness(value)
-        
-    def update_sensor_info(self):
-        return self.model._sensor.subscribe_sensor()
+
+    def update_sensor_data(self):
+        sensor_data = self.model.update_sensor_data()
+        self.view.display_sensor_data(sensor_data)
     
 if __name__ == '__main__':
     zigbeeApp = Controller()
     zigbeeApp.main()
-    
