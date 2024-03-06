@@ -10,6 +10,6 @@ Je ne parle pas du code qui est très bien dans le dossier work. Je parle simple
 A faire : 
 - Modifier le README principal. Il faut qu'il serve uniquement à décrire notre projet et comment est organisé notre dépôt GIT. 
 
-- Modifier le README dans work. J'ai crée un README qui doit pour moi avoir pour but d'expliquer l'application. Il doit servir à savoir comment l'utiliser, savoir sa conception globale (?) et savoir quels sont les différences entre les versions. 
+- Modifier le README dans work. J'ai crée un README qui doit pour moi avoir pour but d'expliquer l'application. Il doit servir à savoir comment l'utiliser, savoir sa conception globale (?) et savoir quels sont les différences entre les versions. On peut également y indiquer ce qu'il faut installer comme lib pour le code (rentre dans le cas de l'utilisation)
 
 - Supprimer le dossier labs. Je ne sais pas ce que tu en pense mais je ne suis pas certain de son intérêt. 
