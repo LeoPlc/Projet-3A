@@ -8,6 +8,12 @@ Home Assistant est une plateforme open-source qui vise à centraliser l'utilisat
 
 HA peut être utilisé de différentes manières. Dans notre cas, nous avons utilisé HA sous forme de système d'exploitation.
 
+## Notre expérience Home Assistant
+
+Après avoir développé notre application du mieux que possible, nous avons voulu nous orienter vers les plateformes d'automatisation Home Assistant et OpenHab.
+
+Home Assistant est très facile d'utilisation, nous avons pu assez facilement utiliser la plateforme et y connecter nos appareils.
+
 ## Installation
 
 Le site de [Home Assistant](https://www.home-assistant.io/) explique très bien l'installation. On peut également trouver plusieurs tutoriels sur YouTube expliquant en détail le processus.
