@@ -27,8 +27,21 @@ En fonction des protocoles de communication mis en place, il n'y a pas seulement
 
 Ainsi ce projet permettra de décrire comment concevoir une application permettant de se connecter à divers appareils connectés via différents protocoles et différentes installations.
 
+Ce projet nous servira également à expliquer notre utilisation de Home Assistant ainsi que de OpenHab. 
+
+Pour finir, vous trouverez également une partie explicative de notre maquette de présentation ainsi que notre vidéo de présentation de notre projet.
+
 ### DIAGRAMME BÊTE A CORNE
 
+## 2- Architecture du dépôt
+
+Notre dépôt possède 3 gros dossiers à savoir [work](https://github.com/LeoPlc/Projet-3A/tree/main/work), [softs](https://github.com/LeoPlc/Projet-3A/tree/main/softs), [demo](https://github.com/LeoPlc/Projet-3A/tree/main/demo).
+
+> Dossier [work](https://github.com/LeoPlc/Projet-3A/tree/main/work) : Ce dossier permet de retrouver les différentes versions de notre application python. Vous y trouverez également un README expliquant notre code ainsi que ses différentes versions. 
+
+> Dossier [softs](https://github.com/LeoPlc/Projet-3A/tree/main/softs) : Ce dossier permet de retrouver deux sous dossier, un pour Home assistant et un pour OpenHab. Dans chaque dossier se trouve un fichier README permettant d'expliquer notre utilisation de l'OS.
+
+> Dossier [demo](https://github.com/LeoPlc/Projet-3A/tree/main/demo) : Ce dossier permet de retrouver la partie démonstration de notre projet. Premièrement, vous trouverez un dossier maquette contenant un README expliquant comment nous avons réalisé notre maquette. Deuxièmement vous retrouverez un dossier presentation contenant notre vidéo de présentation ainsi que notre diaporama. 
 
 ## 2- ARCHITECTURE DE L'APPLICATION
 
