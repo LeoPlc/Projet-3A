@@ -17,6 +17,8 @@ Pour la réalisation de notre maquette, nous avons acquis des planches d'OSB que
 ### Deuxième étape : les alimentations
 
 Comme mentionné précédemment, les ampoules et les Raspberry Pi nécessitent une alimentation électrique. Pour les Raspberry Pi, nous avons simplement percé des trous sur les côtés des compartiments pour faire passer les câbles d'alimentation et Ethernet. En ce qui concerne les ampoules, nous avons créé des ouvertures pour insérer des douilles E27. Ensuite, nous les avons connectées à une prise via des dominos reliés à une multiprise. La rallonge entre le domino et la multiprise est une extension dont Mathis a besoin ultérieurement. Par conséquent, nous avons choisi de ne pas la couper pour éviter d'avoir à la refaire. Voici la photo de l'arrière de la maquette.
+
+
 ![](./imgs/dos_maquette.jpg)
 
 ### Troisième étape : création du réseau Internet
