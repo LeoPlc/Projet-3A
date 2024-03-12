@@ -1,6 +1,8 @@
 # Réalisation de la maquette
 
 Afin de présenter notre projet, nous avons réalisé une maquette. Cette dernière vise à représenter une maison, avec chaque compartiment dédié à un objet connecté différent. Ci-dessous, vous trouverez une photo de la maquette :
+![](./imgs/photo_maquette.jpg)
+
 
 ## Création de la maquette
 

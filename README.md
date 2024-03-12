@@ -2,7 +2,7 @@
 
 Ce projet consiste à concevoir étape par étape une application permettant d'interconnecter divers objets connectés, existants sur le marché. Cette application est décortiquée et présentée dans ce répertoire GitHub, afin d'en comprendre les différents aspects et objectifs. 
 
-Lien vers la vidéo explicative du projet: [cliquez ici](https://www.youtube.com/watch?v=c5vRu4_OLxM)
+Lien vers la vidéo explicative du projet: [cliquez ici](https://www.youtube.com/watch?v=c5vRu4_OLxM). Notre vidéo vient en complément de notre dépôt. N'hésitez donc pas à la visionner pour mieux comprendre notre projet. 
 
 ## 1- INTRODUCTION
 
@@ -42,54 +42,6 @@ Notre dépôt possède 3 gros dossiers à savoir [work](work), [softs](softs), [
 
 > Dossier [softs](softs) : Ce dossier permet de retrouver deux sous dossier, un pour Home assistant et un pour OpenHab. Dans chaque dossier se trouve un fichier README permettant d'expliquer notre utilisation de l'OS.
 
-> Dossier [demo](demo) : Ce dossier permet de retrouver la partie démonstration de notre projet. Premièrement, vous trouverez un dossier maquette contenant un README expliquant comment nous avons réalisé notre maquette. Deuxièmement vous retrouverez un dossier presentation contenant notre vidéo de présentation ainsi que notre diaporama. 
+> Dossier [demo](demo) : Ce dossier permet de retrouver la partie démonstration de notre projet. Cela comprend donc l'explication de la réalisation de notre maquette.  
 
-## 2- ARCHITECTURE DE L'APPLICATION
-
-Avant de commencer toute activité, il faut décider de l'architecture de l'application, car cette dernière devra non seulement permettre la communication avec différents appareils connectés, mais devra aussi traiter les données provenant de ces objets *(capteurs de température, de mouvement, flux vidéo,...)* afin d'en retirer un comportement voulu *(monter la température, fermer un volet, alerter le propriétaire d'un mouvement inhabituel,...)*.
-
-L'application doit donc permettre les choses suivantes:
-- La collection de données
-- Le traitement de ces données
-- Une interface utilisateur
-- Le contrôle des objets 
-- La sauvegarde de ces données en mémoire 
-- Une sécurité 
-- Des entrées utilisateurs *(envoyer des commandes de température, de couleur, d'actions particulières,...)*
-
-L'application mettra donc en oeuvre des concepts de matériel, de protocoles de transmission, mais aussi de base de donnée, de front-end / back-end afin de parvenir à piloter une maison connectée. 
-
-
-### Modèles
-
-- Collection (organisation des tâches en différentes catégories)
-    - Nom
-    - "Slug"
-- Tâche
-    - Description
-    - Collection d'appartenance (clé d'appartenance à une collection)
-
-## 3-Fonctionalités 
-
-Ces fonctionnalités vont permettre la mise en oeuvre du POC, ou Proof of Concept, permettant de valider ou non le cahier des charges initial (fonctionnalités demandées, ici le fait de pouvoir se connecter à distance à un appareil connecté comme une ampoule RGB).
-
-Le POC consiste donc pour nous à mettre en oeuvre les fonctionnalités minimales représentant le projet: se connecter/se déconnecter d'un appareil. Si ces fonctionnalités sont opérationnelles, il faut ensuite pouvoir envoyer une instruction/une commande à cet appareil.
-
-C'est seulement ensuite qu'intervient la personnalisation de l'application Web, une fois que ces fonctionnalités **fondation** sont opérationnelles (créer des listes d'appareils, des scripts permettant d'enchaîner les instructions à la demande...)
-
-### Majeures
-
-- [ ] Chercher un appareil  
-> Cette fonctionnalité n'est pas considérée comme acquise car le topic MQTT de l'objet doit être rentrée en dur dans le code python afin de pouvoir y transmettre des informations. Si jamais vous aviez à disposition une ampoule Zigbee dont vous connaissez le topic MQTT, vous pouvez tout à fait remplacer celui du code par le votre, et cela devrait fonctionner. 
-- [x] Connecter un appareil  
-- [x] Déconnecter un appareil  
-- [x] Envoyer une instruction à l'appareil
-
-### Mineures
-
-- [ ] Ajouter une collection (appareils personnels)  
-- [ ] Supprimer une collection (appareils personnels)  
-- [ ] Ajouter une tâche (allumer, éteindre, activer, désactiver)  
-- [ ] Supprimer une tâche  
-- [ ] Scripter les tâches (exemple ampoules RGB, modes de couleurs)
-
+Afin d'éxécuter notre projet, vous pouvez donc vous rendre dans le dossier [work](work).
