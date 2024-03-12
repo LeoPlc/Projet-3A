@@ -1,3 +1,10 @@
+# CONTENU DU DOSSIER
+
+Dans ce dossier, vous trouverez trois différentes informations. Tout d'abord, il y a deux dossiers : "Home Assistant" et "OpenHab", chacun contenant un fichier README expliquant les travaux que nous avons effectués sur ces logiciels.
+
+Ensuite, vous trouverez un guide d'installation et d'utilisation du broker MQTT qui vous sera utile si vous souhaitez utiliser notre code Python.
+
+
 # INSTALLATION ET UTILISATION DU BROKER MQTT 
 
 ### Installation sur raspberry pi
