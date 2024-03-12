@@ -8,5 +8,6 @@ class Model:
         self._bulb = Bulb()
         self._sensor = Sensor()
 
+    # Mise à jour des données provenant du capteur
     def update_sensor_data(self):
         return self._sensor.subscribe_sensor()

@@ -2,6 +2,8 @@
 
 Ce projet consiste à concevoir étape par étape une application permettant d'interconnecter divers objets connectés, existants sur le marché. Cette application est décortiquée et présentée dans ce répertoire GitHub, afin d'en comprendre les différents aspects et objectifs. 
 
+Lien vers la vidéo explicative du projet: [cliquez ici](https://www.youtube.com/watch?v=c5vRu4_OLxM)
+
 ## 1- INTRODUCTION
 
 ### DESCRIPTION DU PROJET
@@ -31,17 +33,16 @@ Ce projet nous servira également à expliquer notre utilisation de Home Assista
 
 Pour finir, vous trouverez également une partie explicative de notre maquette de présentation ainsi que notre vidéo de présentation de notre projet.
 
-### DIAGRAMME BÊTE A CORNE
 
 ## 2- Architecture du dépôt
 
-Notre dépôt possède 3 gros dossiers à savoir [work](https://github.com/LeoPlc/Projet-3A/tree/main/work), [softs](https://github.com/LeoPlc/Projet-3A/tree/main/softs), [demo](https://github.com/LeoPlc/Projet-3A/tree/main/demo).
+Notre dépôt possède 3 gros dossiers à savoir [work](work), [softs](softs), [demo](demo).
 
-> Dossier [work](https://github.com/LeoPlc/Projet-3A/tree/main/work) : Ce dossier permet de retrouver les différentes versions de notre application python. Vous y trouverez également un README expliquant notre code ainsi que ses différentes versions. 
+> Dossier [work](work) : Ce dossier permet de retrouver les différentes versions de notre application python. Vous y trouverez également un README expliquant notre code ainsi que ses différentes versions. 
 
-> Dossier [softs](https://github.com/LeoPlc/Projet-3A/tree/main/softs) : Ce dossier permet de retrouver deux sous dossier, un pour Home assistant et un pour OpenHab. Dans chaque dossier se trouve un fichier README permettant d'expliquer notre utilisation de l'OS.
+> Dossier [softs](softs) : Ce dossier permet de retrouver deux sous dossier, un pour Home assistant et un pour OpenHab. Dans chaque dossier se trouve un fichier README permettant d'expliquer notre utilisation de l'OS.
 
-> Dossier [demo](https://github.com/LeoPlc/Projet-3A/tree/main/demo) : Ce dossier permet de retrouver la partie démonstration de notre projet. Premièrement, vous trouverez un dossier maquette contenant un README expliquant comment nous avons réalisé notre maquette. Deuxièmement vous retrouverez un dossier presentation contenant notre vidéo de présentation ainsi que notre diaporama. 
+> Dossier [demo](demo) : Ce dossier permet de retrouver la partie démonstration de notre projet. Premièrement, vous trouverez un dossier maquette contenant un README expliquant comment nous avons réalisé notre maquette. Deuxièmement vous retrouverez un dossier presentation contenant notre vidéo de présentation ainsi que notre diaporama. 
 
 ## 2- ARCHITECTURE DE L'APPLICATION
 
@@ -79,9 +80,10 @@ C'est seulement ensuite qu'intervient la personnalisation de l'application Web, 
 ### Majeures
 
 - [ ] Chercher un appareil  
-- [ ] Connecter un appareil  
-- [ ] Déconnecter un appareil  
-- [ ] Envoyer une instruction à l'appareil
+> Cette fonctionnalité n'est pas considérée comme acquise car le topic MQTT de l'objet doit être rentrée en dur dans le code python afin de pouvoir y transmettre des informations. Si jamais vous aviez à disposition une ampoule Zigbee dont vous connaissez le topic MQTT, vous pouvez tout à fait remplacer celui du code par le votre, et cela devrait fonctionner. 
+- [x] Connecter un appareil  
+- [x] Déconnecter un appareil  
+- [x] Envoyer une instruction à l'appareil
 
 ### Mineures
 
@@ -91,165 +93,3 @@ C'est seulement ensuite qu'intervient la personnalisation de l'application Web, 
 - [ ] Supprimer une tâche  
 - [ ] Scripter les tâches (exemple ampoules RGB, modes de couleurs)
 
-
-## 4-DESCRIPTION DES CODES PYTHON
-
-Ici sont présentés les codes qui conçoivent l'application Web permettant de se connecter aux différents appareils. L'application a été développée en **python** à l'aide des bibliothèques **django**, **2**, et **3**. Le code s'articule de la manière suivante.
-
-## 5- INSTALLATION ET UTILISATION DU BROKER MQTT 
-
-### Installation sur raspberry pi
-
-Dans un premier temps installer les librairies nécessaires pour utiliser le broker mqtt:
-
-    sudo apt-get install mosquitto mosquitto-clients
-
-Brancher le broker mqtt au raspberry et vérifier sa détection par la commande 
-
-    lsusb
-
-Normalement, si le broker est bien détecté, le terminal de commande devrait afficher une ligne similaire à celle-ci (dans notre cas, le broker utilisé est de la marque SONOFF)
-
-    Bus 001 Device 002: ID 1a86:55d4 QinHeng Electronics SONOFF Zigbee 3.0 USB Dongle Plus V2
-
-Pour continuer, il faut s'assurer d'avoir nodejs.
-
-> une version compatible est celle présentée ci-dessous, mais si une version plus récente fonctionne, il est tout à fait possible de s'en servir. Le contexte présenté est un contexte fonctionnel au moment où ce projet a été mené.
-
-La version visée de nodejs est la version 16.18.1. Pour installer la dernière version de nodejs, la commande est:
-
-    sudo apt install -y nodejs
-
-Il est possible de spécifier la version souhaitée via: 
-
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-
-Puis 
-
-    nvm install 16.18.1
-
-Ensuite 
-
-    nvm use 16.18.1
-
-
-Et enfin 
-
-    nvm alias default 16.18.1
-
-Cette méthode peut-être adapté aux autres versions souhaitées de nodejs.
-
-Il faut aussi s'assurer de la présence de git, make, g++ et gcc via 
-
-    sudo apt-get install git make g++ gcc
-
-Une fois ces étapes passées, il faut configurer zigbee2mqtt de la manière suivante. Il faut tout d'abord créer un répertoire comme suit : 
-
-    sudo mkdir /opt/zigbee2mqtt
-
-Il faut faire en sorte de ne pas nécessiter l'utilisation de "sudo" à l'intérieur de ce répertoire afin de pouvoir plus tard y intéragir avec des scripts (qui serviront à lancer automatiquement le service zigbee2mqtt à l'allumage du raspberry pi). Il faut utiliser la commande telle quelle:
-
-    sudo chown -R ${USER}: /opt/zigbee2mqtt
-
-
-Il faut ensuite cloner le répertoire git suivant: 
-
-    git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
-
-Il est ensuite nécessaire de se placer dans le répertoire en question :
-
-    cd /opt/zigbee2mqtt
-
-Vérifier la présence de npm et sa version via 
-
-    npm -v
-
-Si npm n'est pas installé il faut utiliser la commande 
-
-    sudo apt-get install npm
-
-Et effectuer la commande suivante: 
-
-    npm ci
-
-
-Une fois ceci-fait, il faut éditer le fichier de configuration placé dans le dossier /opt/zigbee2mqtt/data
-
-    sudo nano data/configuration.yaml
-
-et y inscrire ce qui suit. Il faut tout d'abord remplacer ce qui suit 'base_topic' par ce qui suit :
-
-    zigbee
-
-au lieu de 
-
-    zigbee2mqtt
-
-Il faut ensuite inscrire les lignes tout en bas, la dernière ligne étant 'port: /dev/ttyACM0' cela devrait ressembler à ce qui suit: 
-
-        port: /dev/ttyACM0
-        adapter: ezsp
-    frontend: 
-        port: 8080
-
-Sauvegarder avec **ctrl + s** et quitter avec **ctrl + x**. Il faut ensuite lancer la commande suivante en étant placé dans le dossier /opt/zigbee2mqtt:
-
-    npm start
-
-Normalement, le terminal devrait afficher 
-
-
-### Installation pour Mac
-
-Installer la librairie mosquitto: 
-
-    brew install mosquitto
-
-Le fichier de configuration est stocké dans le dossier 
-
-    /opt/homebrew/etc/mosquitto/mosquitto.conf
-
-Pour lancer les services mosquitto:
-
-    brew services start mosquitto
-
-Une fois ces étapes effectuées on peut utiliser les fonctions mosquitto telles que:
-
-    mosquitto_sub 
-
-Permettant de s'abonner à un sujet (fait partie du protocole Zigbee)
-
-### Test de la librairie mosquitto
-
-Pour pouvoir tester le fonctionnement de mosquitto, on peut ouvrir deux terminaux de commande. 
-Dans le premier terminal, écrire la commande: 
-
-    mosquitto_sub -t topic/state
-
-Dans le second écrire la commande: 
-
-    mosquitto_pub -t topic/state -m "hello world"
-
-Le texte **"Hello world"** devrait s'afficher dans le premier terminal.
-
-### Liens utilisés :
-
-- Lien vers un [article d'installation de mosquitto sur Mac](https://subscription.packtpub.com/book/iot-and-hardware/9781787287815/1/ch01lvl1sec12/installing-a-mosquitto-broker-on-macos).
-- Deuxième [lien pour l'installation sur Mac](https://gist.github.com/KazChe/6bcafbaf29e10a7f309d3ca2e2a0f706)
-- Version [vidéo pour Mac](https://www.youtube.com/watch?v=AD1YvjmRiR4).
-
-## BIBLIOGRAPHIE / LIENS UTILES
-
-#### "HOW TO CREATE AN IOT APP" 
-
-https://waverleysoftware.com/blog/how-to-create-an-iot-app/
-
-Structure de l'application selon ce site : 
-
-![iotAppStructure](img/appStructure.png)
-
-### WEB APPLICATION
-
-#### ZIGBEE TO MQTT
-
-https://www.youtube.com/watch?v=frwhcYQKElU
